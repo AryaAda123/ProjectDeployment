@@ -1,22 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple E-commerce</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vishal Mega Mart 2 - E-commerce</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>My E-Shop vishal</h1>
-    <div class="cart">🛒 Cart (<span id="cart-count">0</span>)</div>
+    <nav class="navbar">
+      <div class="logo">🛍️ Vishal Mega Mart 2</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Deals</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="cart">🛒 Cart (<span id="cart-count">0</span>)</div>
+    </nav>
   </header>
 
   <main>
+    <h2 class="section-title">Our Best Products</h2>
     <div class="products" id="product-list">
-      <!-- Products will be rendered here by JavaScript -->
+      <!-- JS will add products here -->
     </div>
   </main>
+
+  <footer>
+    <p>© 2025 Vishal Mega Mart 2. All rights reserved.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>

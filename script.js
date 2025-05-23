@@ -1,44 +1,46 @@
 const products = [
     {
-      id: 1,
-      name: "T-Shirt",
+      name: "Classic T-Shirt",
       price: 499,
-      image: "https://via.placeholder.com/200x200.png?text=T-Shirt"
+      image: "https://via.placeholder.com/300x200.png?text=Classic+T-Shirt"
     },
     {
-      id: 2,
-      name: "Sneakers",
-      price: 1999,
-      image: "https://via.placeholder.com/200x200.png?text=Sneakers"
+      name: "Sports Shoes",
+      price: 1599,
+      image: "https://via.placeholder.com/300x200.png?text=Sports+Shoes"
     },
     {
-      id: 3,
-      name: "Backpack",
-      price: 899,
-      image: "https://via.placeholder.com/200x200.png?text=Backpack"
+      name: "Smart Watch",
+      price: 2499,
+      image: "https://via.placeholder.com/300x200.png?text=Smart+Watch"
+    },
+    {
+      name: "Leather Bag",
+      price: 1199,
+      image: "https://via.placeholder.com/300x200.png?text=Leather+Bag"
     }
   ];
   
   let cartCount = 0;
   
   function renderProducts() {
-    const productList = document.getElementById('product-list');
+    const container = document.getElementById("product-list");
     products.forEach(product => {
-      const div = document.createElement('div');
-      div.classList.add('product-card');
-      div.innerHTML = `
+      const card = document.createElement("div");
+      card.className = "product-card";
+      card.innerHTML = `
         <img src="${product.image}" alt="${product.name}">
         <h3>${product.name}</h3>
         <p>₹${product.price}</p>
         <button onclick="addToCart()">Add to Cart</button>
       `;
-      productList.appendChild(div);
+      container.appendChild(card);
     });
   }
   
   function addToCart() {
     cartCount++;
-    document.getElementById('cart-count').textContent = cartCount;
+    document.getElementById("cart-count").textContent = cartCount;
   }
   
   renderProducts();
